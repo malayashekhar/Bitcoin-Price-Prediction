@@ -1,77 +1,59 @@
-# Bitcoin Price Prediction Model
+
+# Bitcoin Price Prediction
+
+This project is a Bitcoin price prediction model built using an LSTM neural network, with a web interface powered by Flask for real-time predictions.
+
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies](#technologies)
 
 ## Overview
-This project implements a machine learning model to predict Bitcoin prices using historical price data. The model utilizes time series analysis and LSTM (Long Short-Term Memory) neural networks to forecast future Bitcoin price movements.
 
-## Features
-- Historical Bitcoin price data analysis
-- Time series preprocessing and feature engineering
-- LSTM neural network implementation
-- Price prediction visualization
-- Model performance evaluation
-
-## Dependencies
-```
-pandas
-numpy
-sklearn
-tensorflow
-matplotlib
-seaborn
-yfinance
-```
+The Bitcoin Price Prediction project leverages machine learning to forecast Bitcoin prices based on historical data. The model uses an LSTM (Long Short-Term Memory) network due to its effectiveness with time series data. The project also includes a web interface to view predictions in real-time, hosted locally through Flask.
 
 ## Installation
-1. Clone the repository:
-```bash
-git clone https://github.com/malayashekhar/Bitcoin-Price-Prediction.git
-cd Bitcoin-Price-Prediction
-```
 
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/malayashekhar/Bitcoin-Price-Prediction.git
+   cd Bitcoin-Price-Prediction
+   ```
+
+2. **Install dependencies:**
+   Ensure you have Python installed, then install all dependencies from `requirements.txt`.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
-1. Open the Jupyter notebook:
-```bash
-jupyter notebook "BitCoin Prediction.ipynb"
-```
 
-2. Run all cells in sequence to:
-   - Load and preprocess historical Bitcoin price data
-   - Train the LSTM model
-   - Generate price predictions
-   - Visualize results
+1. **Run the Notebook:**
+   Open and execute all cells in the `.ipynb` notebook to train and test the model.
+   ```bash
+   jupyter notebook Bitcoin_Price_Prediction.ipynb
+   ```
 
-## Model Architecture
-- Input layer with time series data
-- LSTM layers for sequence learning
-- Dense layers for final prediction
-- Optimization using Adam optimizer
-- Mean Squared Error (MSE) as loss function
+2. **Start the Flask App:**
+   After training the model, start the Flask server to access the web interface:
+   ```bash
+   python app.py
+   ```
 
-## Results
-The model provides predictions for Bitcoin price movements based on historical patterns. Visualization includes:
-- Actual vs Predicted price comparisons
-- Price trend analysis
-- Model performance metrics
+3. **View the Web Interface:**
+   Open your browser and navigate to `http://localhost:5000` to view real-time predictions.
 
-## Limitations
-- Market volatility and external factors may affect prediction accuracy
-- Past performance doesn't guarantee future results
-- Model requires regular retraining with new data
+## Project Structure
 
-## Contributing
-Feel free to fork the repository and submit pull requests. For major changes:
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a pull request
+- `Bitcoin_Price_Prediction.ipynb` - Jupyter notebook containing the LSTM model training code.
+- `app.py` - Flask application file for hosting the web interface.
+- `requirements.txt` - List of project dependencies.
 
-## License
-MIT License
+## Technologies
 
-## Contact
-- GitHub: [@malayashekhar](https://github.com/malayashekhar)
+- Python
+- Flask
+- Jupyter Notebook
+- LSTM Neural Network
